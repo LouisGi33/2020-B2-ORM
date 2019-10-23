@@ -7,6 +7,24 @@ exports = module.exports = {
   datasets,
   algo: function (input) {
     // YOUR CODE BETWEEN HERE
+    let poids = 0
+    let passage = 1
+    for (let i = 1; i < input.length; i++) {
+      const test =poids + input[i]
+      if ( test > 100) {
+        poids = input[i]
+        passage += 1
+      } else if (test == 100) {
+        poids = 0
+        if ( input[i+1] != undefined ) {
+          passage +=1
+        }
+      } else {
+        poids = poids + input[i]
+      }
+    }
+    return passage
+    
 
     // AND HERE
   },

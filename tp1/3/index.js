@@ -7,7 +7,12 @@ exports = module.exports = {
   datasets,
   algo: function (input) {
     // YOUR CODE BETWEEN HERE
-    
+    let split = input[i].split('')
+    for (let i = 1; i < input.length) {
+      
+    }
+
+
     // AND HERE
   },
   verify: function (dataset, output) {
